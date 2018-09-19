@@ -20,3 +20,12 @@ ul {
 /**
  * Page styling
  */
+body {
+  background: #f6f6f6;
+}
+.main__swatch-wrap {
+  width: 455px;
+  height: 454px;
+  max-width: 100%;
+  padding: 20px;
+}
