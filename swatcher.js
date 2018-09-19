@@ -15,7 +15,8 @@ class Swatcher {
       if (!settings.swatches && !container.dataset.swatches) {
         // If there are no swatches, we'll ignore this instance
         // and skip ahead to the next container
-        console.error('A class-generated swatcher cannot be generated: missing swatch array');
+        console.error('A class-generated swatcher cannot be generated: missing swatch array on element:');
+        console.error(container);
         continue;
       }
       
