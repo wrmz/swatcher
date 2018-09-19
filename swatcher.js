@@ -102,9 +102,9 @@ class Swatcher {
   updateButtons(previousButton, currentButton) {
     this.active = currentButton;
     if (previousButton) {
-      previousButton.classList.remove('active');
+      previousButton.classList.remove('swatcher__color-button_active');
     }
-    currentButton.classList.add('active');
+    currentButton.classList.add('swatcher__color-button_active');
   }
   
   /**
