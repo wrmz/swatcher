@@ -23,6 +23,16 @@ ul {
 body {
   background: #f6f6f6;
 }
+.main__swatchers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 .main__swatch-wrap {
   width: 455px;
   height: 454px;
