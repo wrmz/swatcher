@@ -85,11 +85,12 @@ class Swatcher {
       ctrlItem.appendChild(ctrlBtn);
       ctrlList.appendChild(ctrlItem);
       
-      this.buttons.push({
-        elem: ctrlBtn,
-        color: val
-      });
+      this.buttons.push({elem: ctrlBtn, color: val});
     }
+    
+    this.element.appendChild(this.view);
+    this.element.appendChild(ctrl);
+    this.listen();
   }
   
   /**
