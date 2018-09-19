@@ -3,6 +3,7 @@ const swatches = ['#fe0002','#01ff00','#00b3fe','orange','purple'];
 // Creating a single `Swatcher` instance
 let swatcherElemA = document.getElementById('swatcherA');
 let swatcherA = new Swatcher(swatcherElemA, swatches, {
+  class: 'swatchteraptor', // optional
   startColor: '#161616' // optional
 });
 
