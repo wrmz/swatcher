@@ -36,6 +36,6 @@ body {
 .main__swatch-wrap {
   width: 455px;
   height: 454px;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
   padding: 20px;
 }
