@@ -1,21 +1,8 @@
-/**
- * @todo - Create destroy methods
- */
 class Swatcher {
-
-  static GENERATION_DEFAULTS = {
-    class: 'swatcher'
-  };
-  
-  static DEFAULTS = {
-    startColor: '#161616'
-  };
-  
-  static children = [];
   
   /**
    * Generates instances of Swatcher from elements containing class.
-   * @param {Object} options - Settings for the instances.
+   * @param {Object} [options] - Settings for the instances. (optional)
    */
   static generateFromClass(options) {
     
@@ -57,7 +44,7 @@ class Swatcher {
    * Creates an instance of the Swatcher class.
    * @param {Element} element - The element containing the swatcher.
    * @param {string[]} swatches - Colors for the swatch buttons.
-   * @param {Object} options - Settings for the instance.
+   * @param {Object} [options] - Settings for the instance. (optional)
    */
   constructor(element, swatches, options) {
     this.element = element;
@@ -162,3 +149,9 @@ class Swatcher {
     this.element.parentNode.removeChild(this.element);
   }
 }
+
+/**
+ * Swatcher defaults, changeable by setting options when instantiating
+ */
+Swatcher.GENERATION_DEFAULTS = {class: 'swatcher'};
+Swatcher.EFAULTS = {startColor: '#161616'};
