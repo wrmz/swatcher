@@ -51,3 +51,8 @@ header h1 {
   max-width: calc(100% - 40px);
   padding: 20px;
 }
+@media screen and (max-width 640px) {
+  .main__swatch-wrap {
+    padding: 20px 0;
+  }
+}
