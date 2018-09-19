@@ -74,6 +74,17 @@ class Swatcher {
     ctrlList.className = 'swatcher__color-list';
     ctrl.appendChild(ctrlList);
     
+    // If the class has been changed via options, 
+    // we need to apply base settings here.
+    if (this.options.class !== 'swatcher') {
+      this.element.style.width = '100%';
+      this.element.style.height = '100%';
+      this.element.style.minWidth = '320px';
+      this.element.style.minHeight = '319px';
+      this.element.style.maxWidth = '455px';
+      this.element.style.maxHeight = '454px';
+    }
+    
     for (let val of this.swatches) {
       const ctrlItem = document.createElement('li');
       const ctrlBtn = document.createElement('button');
