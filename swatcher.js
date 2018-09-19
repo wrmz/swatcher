@@ -49,7 +49,7 @@ class Swatcher {
   constructor(element, swatches, options) {
     this.element = element;
     this.swatches = swatches;
-    this.options = {...Swatches.DEFAULTS, ...options};
+    this.options = {...Swatcher.DEFAULTS, ...options};
     this.buttons = [];
     this.active = null;
     this.handleClick = this.handleClick.bind(this);
