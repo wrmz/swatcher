@@ -80,7 +80,8 @@ class Swatcher {
       
       ctrlItem.className = 'swatcher__color-list-item';
       ctrlBtn.className = 'swatcher__color-button';
-      ctrlBtn.setAttribute('type', 'button');
+      ctrlBtn.style.backgroundColor = val;
+      ctrlBtn.setAttribute('aria-label', val);
       
       ctrlItem.appendChild(ctrlBtn);
       ctrlList.appendChild(ctrlItem);
