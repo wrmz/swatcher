@@ -122,7 +122,7 @@ class Swatcher {
    */
   handleClick(e) {
     const btnObj = this.buttons.find((obj) => obj.elem === e.target);
-    this.updateButtons(this.active.elem, btnObj.elem);
+    this.updateButtons(this.active, btnObj.elem);
     this.updateView(btnObj.color);
   }
   
