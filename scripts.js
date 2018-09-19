@@ -22,12 +22,27 @@ class Swatcher {
    * @param {Object} options - Settings for the instances.
    */
   static generateFromClass(options) {
-    const settings = {...Swatcher.GENERATION_DEFAULTS, ...options};
+    // Merge in user options with defaults
+    const settings = {...Swatcher.GENERATION_DEFAULTS, ...options || {}};
     const containers = document.querySelectorAll(`.${settings.class}`);
     
     for (let container of containers) {
-      const swatches = options.swatches || container.dataset.swatches;
-      Swatcher.children.push(new Swatcher(container, swatches, settings));
+      
+      if (!settings.swatches && !container.dataset.swatches) {
+        // If there are no swatches, we'll ignore this instance
+        // and skip ahead to the next container
+        console.error('A class-generated swatcher cannot be generated: missing swatch array');
+        continue;
+      }
+      
+      const swatchColors = container.dataset.swatches
+        // Parse the array in data attribute
+        // replace the single-quotes with double-quotes for valid JSON
+        ? JSON.parse(container.dataset.swatches.replace(/'/g, '"'))
+        : settings.swatches;
+      
+      // Create a new `Swatcher` instance and add to `Swatcher.children` array
+      Swatcher.children.push(new Swatcher(container, swatchColors, settings));
     }
   }
   
