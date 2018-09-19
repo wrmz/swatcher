@@ -77,6 +77,7 @@ class Swatcher {
     // If the class has been changed via options, 
     // we need to apply base settings here.
     if (this.options.class !== 'swatcher') {
+      this.element.style.position = 'relative';
       this.element.style.width = '100%';
       this.element.style.height = '100%';
       this.element.style.minWidth = '320px';
