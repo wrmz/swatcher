@@ -10,9 +10,7 @@ class Swatcher {
   };
   
   static DEFAULTS = {
-    startColor: '#161616',
-    minButtonWidth: 35,
-    minButtonHeight: 35
+    startColor: '#161616'
   };
   
   static children = [];
@@ -22,6 +20,7 @@ class Swatcher {
    * @param {Object} options - Settings for the instances.
    */
   static generateFromClass(options) {
+    
     // Merge in user options with defaults
     const settings = {...Swatcher.GENERATION_DEFAULTS, ...options || {}};
     const containers = document.querySelectorAll(`.${settings.class}`);
@@ -43,6 +42,16 @@ class Swatcher {
       
       // Create a new `Swatcher` instance and add to `Swatcher.children` array
       Swatcher.children.push(new Swatcher(container, swatchColors, settings));
+    }
+  }
+
+  /**
+   * Destroys all stored statically stored instances of `Swatcher`
+   */
+  static destroyAll() {
+    while (Swatcher.children.length > 0) {
+      const swatcherInstance = Swatcher.children.pop();
+      swatcherInstance.destroy();
     }
   }
   
@@ -145,5 +154,13 @@ class Swatcher {
     for (let btn of this.buttons) {
       btn.elem.removeEventListener('click', this.handleClick);
     }
+  }
+  
+  /**
+   * Removes listeners and removes child from DOM
+   */
+  destroy() {
+    this.unlisten();
+    this.element.parentNode.removeChild(this.element);
   }
 }
