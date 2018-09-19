@@ -4,7 +4,7 @@ const swatches = ['#fe0002','#01ff00','#00b3fe','orange','purple'];
 let swatcherElemA = document.getElementById('swatcherA');
 let swatcherA = new Swatcher(swatcherA, swatches, {
   startColor: '#161616' // optional
-}):
+});
 
 // Creating multiple instances of `Swatcher` by class name
 Swatcher.generateFromClass();
