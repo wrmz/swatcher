@@ -16,26 +16,24 @@
     <div class="main__wrap">
       <div class="main__swatchers">
         
+        <!-- Swatcher instantiated in `swatcher.js` -->
         <div class="main__swatch-wrap">
-          
-          <!-- Swatcher instantiated in `swatcher.js` -->
           <!-- Using another class to show that you can -->
           <div id="swatcherA" class="swatchteraptor"></div>
-          
-        </div><div class="main__swatch-wrap">
-        
-          <!-- Swatchers instantiated by `Swatcher.generateFromClass()` -->
-          <div class="swatcher" data-swatches="['#fe0002','#01ff00','#00b3fe','orange','purple']"></div>
-          <div class="swatcher" data-swatches="['#bada55','#999','cyan','pink']"></div>
-          <div class="swatcher" data-swatches="['rgb(240,128,128)','peachpuff','greenyellow','#00ced1','#ff00ff','#deb887']"></div>
-        
         </div>
+        
+        <!-- Swatchers instantiated by `Swatcher.generateFromClass()` -->
+        <div class="main__swatch-wrap">
+          <div class="swatcher" data-swatches="['#fe0002','#01ff00','#00b3fe','orange','purple']"></div>
+        </div><div class="main__swatch-wrap">
+          <div class="swatcher" data-swatches="['#bada55','#999','cyan','pink']"></div>
+        </div><Div class="main__swatch-wrap">
+          <div class="swatcher" data-swatches="['rgb(240,128,128)','peachpuff','greenyellow','#00ced1','#ff00ff','#deb887']"></div>
+        </div>
+        
       </div>
     </div>
   </main>
-  <footer>
-    
-  </footer>
   <script src="./swatcher.js"></script>
   <script src="./scripts.js"></script>
 </body>
