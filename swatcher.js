@@ -162,4 +162,4 @@ Swatcher.children = [];
  * Swatcher defaults, changeable by setting options when instantiating
  */
 Swatcher.GENERATION_DEFAULTS = {class: 'swatcher'};
-Swatcher.EFAULTS = {startColor: '#161616'};
+Swatcher.DEFAULTS = {startColor: '#161616'};
