@@ -10,7 +10,7 @@ class Swatcher {
   };
   
   static DEFAULTS = {
-    startColor: '#161616';
+    startColor: '#161616',
     minButtonWidth: 35,
     minButtonHeight: 35
   };
