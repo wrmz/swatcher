@@ -151,6 +151,11 @@ class Swatcher {
 }
 
 /**
+ * Swatcher's array of children for class generated instances
+ */ 
+Swatcher.children = [];
+
+/**
  * Swatcher defaults, changeable by setting options when instantiating
  */
 Swatcher.GENERATION_DEFAULTS = {class: 'swatcher'};
