@@ -1,4 +1,5 @@
 .swatcher {
+  position: relative;
   width: 100%;
   height: 100%;
   min-width: 320px;
@@ -7,13 +8,13 @@
   max-height: 454px;
 }
 .swatcher__view {
-  height: 80%;
+  min-height: 80%;
   -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out;
 }
 .swatcher__ctrl {
   position: relative;
-  height: 20%;
+  min-height: 20%;
 }
 .swatcher__color-list {
   display: -webkit-box;
@@ -21,7 +22,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  height: 91px;
+  height: 100%;
 }
 .swatcher__color-list-item {
   position: relative;
