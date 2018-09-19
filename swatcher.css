@@ -1,14 +1,11 @@
-.swatcher {
-  width: 455px;
-  height: 454px;
-}
 .swatcher__view {
-  height: 363px;
+  height: 80%;
   -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out;
 }
 .swatcher__ctrl {
   position: relative;
+  height: 20%;
 }
 .swatcher__color-list {
   display: -webkit-box;
