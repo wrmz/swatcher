@@ -1,5 +1,3 @@
-const swatches = ['#fe0002','#01ff00','#00b3fe','orange','purple'];
-
 /**
  * @todo - Create destroy methods
  */
